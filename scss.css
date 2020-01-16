@@ -1,4 +1,8 @@
-.navbar {
+body {
+  font-family: Verdana, sans-serif;
+}
+
+body .navbar {
   overflow: hidden;
   background-color: red;
   top: 0;
@@ -13,11 +17,11 @@
           justify-content: center;
   position: fixed;
   border: 3px solid black;
-  z-index: -1;
+  z-index: 2;
   padding: 25px 0 25px 0;
 }
 
-.navbar a {
+body .navbar a {
   position: relative;
   left: 80px;
   float: left;
@@ -30,12 +34,21 @@
   border-right: 3px solid white;
 }
 
-.navbar a:hover {
+body .navbar a:hover {
   background-color: #f06565;
 }
 
-.navbar a:active {
+body .navbar a:active {
   background-color: red;
   color: white;
+}
+
+body #pizzahotline-logo {
+  width: 200px;
+  height: 52.35px;
+  position: fixed;
+  float: left;
+  right: 1125px;
+  top: 15px;
 }
 /*# sourceMappingURL=scss.css.map */

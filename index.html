@@ -16,22 +16,13 @@
         }
         /*0.2617777777*/
         
-        #pizzahotline-logo {
-            width: 200px;
-            height: 52.35px;
-            position: fixed;
-            float: left;
-            right: 1150px;
-            top: 15px;
-        }
-        
         body {
             font-family: Verdana, sans-serif;
-            margin: 0
+            margin: 0;
         }
         
         .mySlides {
-            display: none
+            display: none;
         }
         
         img {
@@ -40,60 +31,11 @@
         /* Slideshow container */
         
         .slideshow-container {
-            max-width: 650px;
+            max-width: 1400px;
             position: relative;
-            margin: 70px auto auto auto;
+            margin: 40px auto auto auto;
+            z-index: 0;
         }
-        /* Next & previous buttons */
-        
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-        /* Position the "next button" to the right */
-        
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        /* On hover, add a black background color with a little bit see-through */
-        
-        .prev:hover,
-        .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        /* Caption text */
-        
-        .text {
-            color: #f2f2f2;
-            font-size: 15px;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 8px;
-            width: 100%;
-            text-align: center;
-        }
-        /* Number text (1/3 etc) */
-        
-        .numbertext {
-            color: #f2f2f2;
-            font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
-        }
-        /* The dots/bullets/indicators */
         
         .fade {
             -webkit-animation-name: fade;
@@ -124,7 +66,7 @@
     <div class="navbar">
         <img id="pizzahotline-logo" src="pizzahotline.png" />
         <a href="index.html">Home</a>
-        <a href="#">Contact Us</a>
+        <a href="order.html">Order Online</a>
         <a href="#">Terms</a>
         <a href="#">Privacy Policy</a>
         <a href="#">Franchising</a>
@@ -135,18 +77,15 @@
     <div class="slideshow-container">
 
         <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="https://www.pizzahotline.ca/images/index_ban_01.jpg" style="width:652px; height:252px;">
+            <img src="https://mobile-cuisine.com/wp-content/uploads/2012/11/pizza-fun-facts.jpg" style="width:1370px; height:489px;">
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="https://www.pizzahotline.ca/images/index_ban_02.jpg" style="width:652px; height:252px;">
+            <img src="https://www.pizzajoes.com/wp-content/uploads/2019/07/pizza-home.png" style="width:1370px; height:489px;">
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="https://www.pizzahotline.ca/images/index_ban_03.jpg" style="width:652px; height:252px;">
+            <img src="https://cdn.modpizza.com/wp-content/uploads/2019/10/20190918-WebsiteBannerPhoto-72dpi_50.jpg" style="width:1370px; height:489px;">
         </div>
     </div>
 
@@ -156,15 +95,15 @@
 
         function showSlides() {
             var i;
-            var slides = document.getElementsByClassName("mySlides");
+            var slides = document.getElementsByClassName(" mySlides ");
             for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+                slides[i].style.display = "none ";
             }
             slideIndex++;
             if (slideIndex > slides.length) {
                 slideIndex = 1
             }
-            slides[slideIndex - 1].style.display = "block";
+            slides[slideIndex - 1].style.display = "block ";
             setTimeout(showSlides, 7000); // Change image every 2 seconds
         }
     </script>

@@ -1,35 +1,44 @@
-body {}
-
-.navbar {
-    overflow: hidden;
-    background-color: red;
-    top: 0;
-    left: 0;
-    height: 35px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    border: 3px solid black;
-    z-index: -1;
-    padding: 25px 0 25px 0;
-    a {
-        position: relative;
-        left: 80px;
-        float: left;
-        color: white;
-        text-align: center;
-        padding: 0 16px;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: bold;
-        border-right: 3px solid white;
-        &:hover {
-            background-color: #f06565;
-        }
-        &:active {
-            background-color: red;
+body {
+    font-family: Verdana, sans-serif;
+    .navbar {
+        overflow: hidden;
+        background-color: red;
+        top: 0;
+        left: 0;
+        height: 35px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        border: 3px solid black;
+        z-index: 2;
+        padding: 25px 0 25px 0;
+        a {
+            position: relative;
+            left: 80px;
+            float: left;
             color: white;
+            text-align: center;
+            padding: 0 16px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-right: 3px solid white;
+            &:hover {
+                background-color: #f06565;
+            }
+            &:active {
+                background-color: red;
+                color: white;
+            }
         }
+    }
+    #pizzahotline-logo {
+        width: 200px;
+        height: 52.35px;
+        position: fixed;
+        float: left;
+        right: 1125px;
+        top: 15px;
     }
 }

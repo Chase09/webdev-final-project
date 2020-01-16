@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="scss.css" />
+</head>
+
+<body>
+    <style>
+        input[type=text] {
+            width: 300px;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: black;
+            background-color: lightgray;
+            z-index: -2;
+            outline: none;
+        }
+        
+        input[type=email] {
+            width: 300px;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: black;
+            background-color: lightgray;
+            z-index: -2;
+            outline: none;
+        }
+        
+        #size {
+            width: 300px;
+            height: 25px;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: black;
+            background-color: lightgray;
+            z-index: -2;
+            margin-left: 360px;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        #payment {
+            width: 300px;
+            height: 25px;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: black;
+            background-color: lightgray;
+            z-index: -2;
+            margin-left: 60px;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        #cardnmb {
+            width: 300px;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: black;
+            background-color: lightgray;
+            z-index: -2;
+            margin-left: 3px;
+            outline: none;
+        }
+        
+        #city {
+            width: 300px;
+            height: 25px;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: black;
+            background-color: lightgray;
+            z-index: -2;
+            margin-left: 360px;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        
+        #pza-tpn {
+            cursor: pointer;
+        }
+        
+        #pizza-toppings {
+            width: 300px;
+            height: 25px;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: black;
+            background-color: lightgray;
+            margin-left: 360px;
+            margin-top: 0px;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        #pizza-premade {
+            width: 300px;
+            height: 25px;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: black;
+            background-color: lightgray;
+            margin-left: 60px;
+            margin-top: 0px;
+            cursor: pointer;
+            position: relative;
+        }
+    </style>
+
+    <div class="navbar">
+        <img id="pizzahotline-logo" src="pizzahotline.png" />
+        <a href="index.html">Home</a>
+        <a href="order.html">Order Online</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Franchising</a>
+        <a href="#">Fundraising</a>
+        <a href="#">Careers</a>
+    </div>
+    <div style="height:700px; margin-top:100px; z-index: -2;">
+        <h1 style="text-align: center; text-decoration: underline;">Order Online</h1>
+        <form id="order" method="get">
+            <label style="margin-left:300px;" for="email">Email:</label>
+            <input type="email" name="email" placeholder="Enter your email address" size="40" maxlength="90" id="email" />
+            <label for="name">Name:</label>
+            <input type="text" name="name" placeholder="Enter you full name" id="name" size="40" max length="90" />
+            <br>
+        </form>
+        <br>
+        <form>
+            <select name="size" id="size">
+                    <option value="small">Small</option>
+                    <option valiue="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extra large">Extra Large</option>
+                </select>
+            <select name="payment" id="payment">
+                    <option value="visa">Paypal</option>
+                    <option value="credit card">Credit Card</option>
+                    <option value="debit card">Debit Card</option>
+                </select>
+        </form>
+        <br>
+        <form>
+            <select name="city" id="city">
+                    <option vlaue="winnipeg">Winnipeg</option>
+                    <option value="brandon">Brandon</option>
+                    <option value="steinbach">Steinbach</option>
+                    <option value="winkler & morden">Winkler & Morden</option>
+                    <option value="portage la prairie stonewall">Portage la Prairie Stonewall</option>
+                </select>
+            <input style="margin-left:60px;" type="text" name="address" placeholder="Enter your address" id="address" />
+        </form>
+        <br>
+        <form id="pstlcd" method="get">
+            <label style="margin-left:252px;" for="postal">Postal Code:</label>
+            <input type="text" name="postal" placeholder="Enter your postal code" maxlength="6" id="postal" />
+            <label for="cardnmb">&nbsp;Card:</label>
+            <input type="number" name="cardnmb" placeholder="Enter your card number" id="cardnmb" />
+        </form>
+        <input id="pizza-toppings" style="margin-top:85px;" type="button" name="answer" value="Toppings" onclick="showDiv()" />
+        <input id="pizza-premade" style="margin-top:85px;" type="button" name="answer" value="Pre-Made" onclick="showDiv2()" />
+        <div id="welcomeDiv" style="display:none;" class="answer_list">
+            <h1 style="text-align: center; text-decoration: underline;">Toppings</h1>
+            <form style="margin-left:400px;">
+                <input id="pza-tpn" type="checkbox" name="toppings" value="pepperoni" /><b>Pepperoni</b>
+                <input id="pza-tpn" type="checkbox" name="toppings" value="mushrooms" style="margin-left:28px;" /><b>Mushrooms</b>
+                <input id="pza-tpn" type="checkbox" name="toppings" value="italian sausage" /><b>Italian Sausage</b>
+                <input id="pza-tpn" type="checkbox" name="toppings" value="green peppers" /><b>Green Peppers</b>
+                <br>
+                <input id="pza-tpn" type="checkbox" name="toppings" value="extra cheese" /><b>Extra cheese</b>
+                <input id="pza-tpn" type="checkbox" name="toppings" value="olives" /><b>Olives</b>
+                <input id="pza-tpn" type="checkbox" name="toppings" value="bacon" style="margin-left:53px;" /><b>Bacon</b>
+                <input id="pza-tpn" type="checkbox" name="toppings" value="ham" style="margin-left:90px;" /><b>Ham</b>
+                <br>
+                <input id="pza-tpn" type="checkbox" name="toppings" value="pineapple" style="margin-left:145px;" /><b>Pineapple</b>
+                <input id="pza-tpn" type="checkbox" name="toppings" value="red peppers" style="margin-left:20px;" /><b>Red Peppers</b>
+            </form>
+        </div>
+    </div>
+    <script>
+        function showDiv() {
+            document.getElementById('welcomeDiv').style.display = "block";
+        }
+
+        function showDiv2() {
+            document.getElementById('welcomeDiv2').style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
