@@ -61,12 +61,36 @@
                 opacity: 1
             }
         }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+        
+        .column {
+            flex: 50%;
+            display: flex;
+            padding: 0 4px;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 450px;
+            height: 300px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
         /* On smaller screens, decrease text size */
     </style>
     <div class="navbar">
         <img id="pizzahotline-logo" src="pizzahotline.png" />
         <a href="index.html">Home</a>
-        <a href="order.html">Order Online</a>
+        <a href="pick-order.html">Order Online</a>
         <a href="#">Terms</a>
         <a href="#">Privacy Policy</a>
         <a href="#">Franchising</a>
@@ -77,18 +101,31 @@
     <div class="slideshow-container">
 
         <div class="mySlides fade">
-            <img src="https://mobile-cuisine.com/wp-content/uploads/2012/11/pizza-fun-facts.jpg" style="width:1370px; height:489px;">
+            <img src="https://mobile-cuisine.com/wp-content/uploads/2012/11/pizza-fun-facts.jpg" style="width:1351px; height:489px;">
         </div>
 
         <div class="mySlides fade">
-            <img src="https://www.pizzajoes.com/wp-content/uploads/2019/07/pizza-home.png" style="width:1370px; height:489px;">
+            <img src="https://www.pizzajoes.com/wp-content/uploads/2019/07/pizza-home.png" style="width:1351px; height:489px;">
         </div>
 
         <div class="mySlides fade">
-            <img src="https://cdn.modpizza.com/wp-content/uploads/2019/10/20190918-WebsiteBannerPhoto-72dpi_50.jpg" style="width:1370px; height:489px;">
+            <img src="https://cdn.modpizza.com/wp-content/uploads/2019/10/20190918-WebsiteBannerPhoto-72dpi_50.jpg" style="width:1351px; height:489px;">
         </div>
     </div>
-
+    <h1 style="text-align: center; text-decoration: underline;">Pizza Hotline</h1>
+    <p style="text-align: center;">
+        Welcome to pizza hotlines official website, if you are here to order online then click the order online section of the navigation bar.<br> If you are here to place an order and then pick it up then call us at (204)-222-2222.
+    </p>
+    <div class="row">
+        <div class="column">
+            <img src="https://cdn.popmenu.com/image/upload/c_limit,f_auto,h_1440,q_auto,w_1440/twave3pm189b1ezmkrkq.jpg">
+            <img src="http://wecookpizzaandpasta.com/wp-content/uploads/2016/07/pizza.jpg">
+        </div>
+        <div class="column">
+            <img src="https://www.cicis.com/wp-content/uploads/2019/04/pizza_categoryheader.png">
+            <img src="https://www.hungryhowies.com/sites/default/files/styles/menu_item_280x175/public/images/menu-items/thumbnails/build-you-own_0.png?itok=kqLw4gRp">
+        </div>
+    </div>
     <script>
         var slideIndex = 0;
         showSlides();

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="scss.css" />
+</head>
+
+<body>
+    <style>
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+        
+        .column {
+            flex: 50%;
+            display: flex;
+            padding: 0 4px;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            margin-top: 100px;
+        }
+        
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 450px;
+            height: 300px;
+            margin-left: 20px;
+            margin-top: 0px;
+        }
+        
+        .column1 img {
+            margin-top: 8px;
+            width: 850px;
+            height: 300px;
+            margin-left: 260px;
+        }
+        
+        #pizza-opt:hover {
+            zoom: 1.01;
+            cursor: pointer;
+        }
+        
+        #other-opt:hover {
+            zoom: 1.01;
+            cursor: pointer;
+        }
+        
+        #both-img:hover {
+            cursor: pointer;
+        }
+    </style>
+    <div class="navbar">
+        <img id="pizzahotline-logo" src="pizzahotline.png" />
+        <a href="index.html">Home</a>
+        <a href="pick-order.html">Order Online</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Franchising</a>
+        <a href="#">Fundraising</a>
+        <a href="#">Careers</a>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img id="pizza-opt" onclick="window.location.href='order.html'" src="pizza.png">
+            <img id="other-opt" onclick="window.location.href='salad-order.html'" src="wings-salad.png">
+        </div>
+        <div class="column1">
+            <img id="both-img" src="https://cache.dominos.com/nolo/ca/en/056414/assets/build/market/CA/_en/images/promo/DPC_N57_GM_HP_large_4_toppings_mobile.png">
+        </div>
+    </div>
+</body>
+
+</html>

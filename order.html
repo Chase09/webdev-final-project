@@ -101,6 +101,7 @@
             margin-top: 0px;
             cursor: pointer;
             position: relative;
+            outline: none;
         }
         
         #pizza-premade {
@@ -114,13 +115,28 @@
             margin-top: 0px;
             cursor: pointer;
             position: relative;
+            outline: none;
+        }
+        
+        #order-button {
+            width: 300px;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: black;
+            background-color: lightgray;
+            margin-left: 530px;
+            margin-top: 100px;
+            cursor: pointer;
+            position: relative;
+            outline: none;
         }
     </style>
 
     <div class="navbar">
         <img id="pizzahotline-logo" src="pizzahotline.png" />
         <a href="index.html">Home</a>
-        <a href="order.html">Order Online</a>
+        <a href="pick-order.html">Order Online</a>
         <a href="#">Terms</a>
         <a href="#">Privacy Policy</a>
         <a href="#">Franchising</a>
@@ -168,8 +184,8 @@
             <label for="cardnmb">&nbsp;Card:</label>
             <input type="number" name="cardnmb" placeholder="Enter your card number" id="cardnmb" />
         </form>
-        <input id="pizza-toppings" style="margin-top:85px;" type="button" name="answer" value="Toppings" onclick="showDiv()" />
-        <input id="pizza-premade" style="margin-top:85px;" type="button" name="answer" value="Pre-Made" onclick="showDiv2()" />
+        <input id="pizza-toppings" style="margin-top:20px;" type="button" name="answer" value="Toppings" onclick="showDiv()" />
+        <input id="pizza-premade" style="margin-top:20px;" type="button" name="answer" value="Premade" onclick="showDiv2()" />
         <div id="welcomeDiv" style="display:none;" class="answer_list">
             <h1 style="text-align: center; text-decoration: underline;">Toppings</h1>
             <form style="margin-left:400px;">
@@ -187,14 +203,26 @@
                 <input id="pza-tpn" type="checkbox" name="toppings" value="red peppers" style="margin-left:20px;" /><b>Red Peppers</b>
             </form>
         </div>
+        <div style="display: none;" id="welcomeDiv2">
+            <h1 style="text-align: center; text-decoration: underline;">Premade</h1>
+            <form style="margin-left:400px;">
+                <input id="premade-pza" type="checkbox" name="premade" value="pepperoni" /><b>Pepperoni</b>
+                <input id="premade-pza" type="checkbox" name="premade" value="canadian" style="margin-left:28px;" /><b>Canadian</b>
+                <input id="premade-pza" type="checkbox" name="premade" value="vegetarian" style="margin-left:24px;" /><b>Vegetarian</b>
+                <input id="premade-pza" type="checkbox" name="premade" value="ham & pineapple" style="margin-left:46px;" /><b>Ham & Pineapple</b>
+            </form>
+        </div>
+        <button id="order-button">Proceed</button>
     </div>
     <script>
         function showDiv() {
             document.getElementById('welcomeDiv').style.display = "block";
+            document.getElementById('welcomeDiv2').style.display = "none";
         }
 
         function showDiv2() {
             document.getElementById('welcomeDiv2').style.display = "block";
+            document.getElementById('welcomeDiv').style.display = "none";
         }
     </script>
 </body>
