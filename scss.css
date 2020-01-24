@@ -1,54 +1,73 @@
 body {
-  font-family: Verdana, sans-serif;
+    font-family: Verdana, sans-serif;
 }
+
+
+/*This styles the navbar*/
 
 body .navbar {
-  overflow: hidden;
-  background-color: red;
-  top: 0;
-  left: 0;
-  height: 35px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: fixed;
-  border: 3px solid black;
-  z-index: 2;
-  padding: 25px 0 25px 0;
+    overflow: hidden;
+    background-color: red;
+    top: 0;
+    left: 0;
+    height: 35px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: fixed;
+    border: 3px solid black;
+    z-index: 2;
+    padding: 25px 0 25px 0;
 }
+
+
+/*This styles the hyperlinks on the navar*/
 
 body .navbar a {
-  position: relative;
-  left: 80px;
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 0 16px;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-  border-right: 3px solid white;
+    position: relative;
+    left: 0px;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 0 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-right: 3px solid white;
+    display: block;
 }
+
+
+/*This styles the hyperlinks when you hover over them on the navbar*/
 
 body .navbar a:hover {
-  background-color: #f06565;
+    background-color: #f06565;
 }
 
-body .navbar a:active {
-  background-color: red;
-  color: white;
+
+/*This makes it so when your screen is 1000px or less the pizza hotline logo will disapear */
+
+@media screen and (max-width: 1000px) {
+    #pizzahotline-logo {
+        display: none;
+    }
 }
+
+
+/*This is the styling for the pizza hotline logo*/
 
 body #pizzahotline-logo {
-  width: 200px;
-  height: 52.35px;
-  position: fixed;
-  float: left;
-  right: 1125px;
-  top: 15px;
+    width: 200px;
+    height: 52.35px;
+    position: fixed;
+    float: left;
+    margin-left: -40vw;
+    top: 15px;
 }
+
+
 /*# sourceMappingURL=scss.css.map */

@@ -2,82 +2,121 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="scss.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="scss.css">/>
 </head>
 
 <body>
     <style>
+        body {
+            margin: 0;
+        }
+        /* This is the styling for the text boxes on the order page*/
+        
         input[type=text] {
             width: 300px;
             height: 20px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
             z-index: -2;
             outline: none;
         }
+        /*This creates a light blue border when you use tab to hover over this input*/
+        
+        input[type=text]:focus {
+            border: 1px solid lightblue;
+        }
+        /* This is the styling for the text boxes on the order page*/
         
         input[type=email] {
             width: 300px;
             height: 20px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
             z-index: -2;
             outline: none;
+            margin-left: 4vw;
         }
+        /*This creates a light blue border when you use tab to hover over this input*/
+        
+        input[type=email]:focus {
+            border: 1px solid lightblue;
+        }
+        /* This is the styling for the text boxes on the order page*/
         
         #size {
             width: 300px;
             height: 25px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
             z-index: -2;
-            margin-left: 360px;
             outline: none;
             cursor: pointer;
+            margin-left: 4vw;
         }
+        /*This creates a light blue border when you use tab to hover over this input*/
+        
+        #size:focus {
+            border: 1px solid lightblue;
+        }
+        /* This is the styling for the text boxes on the order page*/
         
         #payment {
             width: 300px;
             height: 25px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
             z-index: -2;
-            margin-left: 60px;
+            box-sizing: border-box;
             outline: none;
             cursor: pointer;
+            margin-left: 4.5vw;
         }
+        /*This creates a light blue border when you use tab to hover over this input*/
+        
+        #payment:focus {
+            border: 1px solid lightblue;
+        }
+        /* This is the styling for the text boxes on the order page*/
         
         #cardnmb {
             width: 300px;
-            height: 20px;
+            height: 25px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
             z-index: -2;
             margin-left: 3px;
+            box-sizing: border-box;
             outline: none;
         }
+        /*This creates a light blue border when you use tab to hover over this input*/
+        
+        #cardnmb:focus {
+            border: 1px solid lightblue;
+        }
+        /* This is the styling for the text boxes on the order page*/
         
         #city {
             width: 300px;
             height: 25px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
             z-index: -2;
-            margin-left: 360px;
+            box-sizing: border-box;
             outline: none;
             cursor: pointer;
+            margin-left: 4vw;
+        }
+        /*This creates a light blue border when you use tab to hover over this input*/
+        
+        #city:focus {
+            border: 1px solid lightblue;
         }
         
         input::-webkit-outer-spin-button,
@@ -89,71 +128,83 @@
         #pza-tpn {
             cursor: pointer;
         }
+        /*this is the button that displays the pizza toppings*/
         
         #pizza-toppings {
             width: 300px;
             height: 25px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
-            margin-left: 360px;
             margin-top: 0px;
             cursor: pointer;
             position: relative;
             outline: none;
         }
+        
+        #pizza-toppings:focus {
+            border: 1px solid lightblue;
+        }
+        /*this is the button that displays the premade pizzas*/
         
         #pizza-premade {
             width: 300px;
             height: 25px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
-            margin-left: 60px;
             margin-top: 0px;
             cursor: pointer;
             position: relative;
             outline: none;
         }
         
+        #pizza-premade:focus {
+            border: 1px solid lightblue;
+        }
+        /*this is the button that says proceed*/
+        
         #order-button {
             width: 300px;
             height: 20px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
-            margin-left: 530px;
             margin-top: 100px;
             cursor: pointer;
             position: relative;
             outline: none;
+            transition: width 1s;
+        }
+        /*When you hover over the order button it will expand its width to 350px*/
+        
+        #order-button:hover {
+            width: 350px;
+        }
+        /*This creates a light blue border when you use tab to hover over this input*/
+        
+        #order-button:focus {
+            border: 1px solid lightblue;
         }
     </style>
 
-    <div class="navbar">
+    <div class="navbar" id="myNavbar">
         <img id="pizzahotline-logo" src="pizzahotline.png" />
         <a href="index.html">Home</a>
-        <a href="pick-order.html">Order Online</a>
+        <a href="pick-order.html" class="active">Order Online</a>
         <a href="#">Terms</a>
         <a href="#">Privacy Policy</a>
-        <a href="#">Franchising</a>
-        <a href="#">Fundraising</a>
-        <a href="#">Careers</a>
+
     </div>
     <div style="height:700px; margin-top:100px; z-index: -2;">
         <h1 style="text-align: center; text-decoration: underline;">Order Online</h1>
-        <form id="order" method="get">
-            <label style="margin-left:300px;" for="email">Email:</label>
+        <form style="text-align: center;" id="order" method="get">
             <input type="email" name="email" placeholder="Enter your email address" size="40" maxlength="90" id="email" />
-            <label for="name">Name:</label>
-            <input type="text" name="name" placeholder="Enter you full name" id="name" size="40" max length="90" />
+            <input style="margin-left: 4.5vw;" type="text" name="name" placeholder="Enter you full name" id="name" size="40" max length="90" />
             <br>
         </form>
         <br>
-        <form>
+        <form class="pay-size" style="text-align: center;">
             <select name="size" id="size">
                     <option value="small">Small</option>
                     <option valiue="medium">Medium</option>
@@ -167,7 +218,7 @@
                 </select>
         </form>
         <br>
-        <form>
+        <form style="text-align: center;">
             <select name="city" id="city">
                     <option vlaue="winnipeg">Winnipeg</option>
                     <option value="brandon">Brandon</option>
@@ -175,44 +226,46 @@
                     <option value="winkler & morden">Winkler & Morden</option>
                     <option value="portage la prairie stonewall">Portage la Prairie Stonewall</option>
                 </select>
-            <input style="margin-left:60px;" type="text" name="address" placeholder="Enter your address" id="address" />
+            <input style="margin-left:4.5vw;" type="text" name="address" placeholder="Enter your address" id="address" />
         </form>
         <br>
-        <form id="pstlcd" method="get">
-            <label style="margin-left:252px;" for="postal">Postal Code:</label>
-            <input type="text" name="postal" placeholder="Enter your postal code" maxlength="6" id="postal" />
-            <label for="cardnmb">&nbsp;Card:</label>
-            <input type="number" name="cardnmb" placeholder="Enter your card number" id="cardnmb" />
+        <form id="pstlcd" method="get" style="text-align: center;">
+            <input style="margin-left:4vw;" type="text" name="postal" placeholder="Enter your postal code" maxlength="6" id="postal" />
+            <input style="margin-left: 4.5vw;" type="number" name="cardnmb" placeholder="Enter your card number" id="cardnmb" />
         </form>
-        <input id="pizza-toppings" style="margin-top:20px;" type="button" name="answer" value="Toppings" onclick="showDiv()" />
-        <input id="pizza-premade" style="margin-top:20px;" type="button" name="answer" value="Premade" onclick="showDiv2()" />
+        <form style="text-align: center;">
+            <input id="pizza-toppings" style="margin-top:20px; margin-left: 4vw; " type="button" name="answer" value="Toppings" onclick="showDiv()" />
+            <input id="pizza-premade" style="margin-top:20px; margin-left:4.5vw;" type="button" name="answer" value="Premade" onclick="showDiv2()" />
+        </form>
         <div id="welcomeDiv" style="display:none;" class="answer_list">
             <h1 style="text-align: center; text-decoration: underline;">Toppings</h1>
-            <form style="margin-left:400px;">
+            <form style="text-align: center;">
                 <input id="pza-tpn" type="checkbox" name="toppings" value="pepperoni" /><b>Pepperoni</b>
-                <input id="pza-tpn" type="checkbox" name="toppings" value="mushrooms" style="margin-left:28px;" /><b>Mushrooms</b>
+                <input id="pza-tpn" type="checkbox" name="toppings" value="mushrooms" /><b>Mushrooms</b>
                 <input id="pza-tpn" type="checkbox" name="toppings" value="italian sausage" /><b>Italian Sausage</b>
                 <input id="pza-tpn" type="checkbox" name="toppings" value="green peppers" /><b>Green Peppers</b>
                 <br>
                 <input id="pza-tpn" type="checkbox" name="toppings" value="extra cheese" /><b>Extra cheese</b>
                 <input id="pza-tpn" type="checkbox" name="toppings" value="olives" /><b>Olives</b>
-                <input id="pza-tpn" type="checkbox" name="toppings" value="bacon" style="margin-left:53px;" /><b>Bacon</b>
-                <input id="pza-tpn" type="checkbox" name="toppings" value="ham" style="margin-left:90px;" /><b>Ham</b>
+                <input id="pza-tpn" type="checkbox" name="toppings" value="bacon" /><b>Bacon</b>
+                <input id="pza-tpn" type="checkbox" name="toppings" value="ham" /><b>Ham</b>
                 <br>
-                <input id="pza-tpn" type="checkbox" name="toppings" value="pineapple" style="margin-left:145px;" /><b>Pineapple</b>
-                <input id="pza-tpn" type="checkbox" name="toppings" value="red peppers" style="margin-left:20px;" /><b>Red Peppers</b>
+                <input id="pza-tpn" type="checkbox" name="toppings" value="pineapple" /><b>Pineapple</b>
+                <input id="pza-tpn" type="checkbox" name="toppings" value="red peppers" /><b>Red Peppers</b>
             </form>
         </div>
         <div style="display: none;" id="welcomeDiv2">
             <h1 style="text-align: center; text-decoration: underline;">Premade</h1>
-            <form style="margin-left:400px;">
+            <form style="margin-left:0px;text-align: center;">
                 <input id="premade-pza" type="checkbox" name="premade" value="pepperoni" /><b>Pepperoni</b>
-                <input id="premade-pza" type="checkbox" name="premade" value="canadian" style="margin-left:28px;" /><b>Canadian</b>
-                <input id="premade-pza" type="checkbox" name="premade" value="vegetarian" style="margin-left:24px;" /><b>Vegetarian</b>
-                <input id="premade-pza" type="checkbox" name="premade" value="ham & pineapple" style="margin-left:46px;" /><b>Ham & Pineapple</b>
+                <input id="premade-pza" type="checkbox" name="premade" value="canadian" /><b>Canadian</b>
+                <input id="premade-pza" type="checkbox" name="premade" value="vegetarian" /><b>Vegetarian</b>
+                <input id="premade-pza" type="checkbox" name="premade" value="ham & pineapple" /><b>Ham & Pineapple</b>
             </form>
         </div>
-        <button id="order-button">Proceed</button>
+        <div style="text-align: center;">
+            <button id="order-button">Proceed</button>
+        </div>
     </div>
     <script>
         function showDiv() {
@@ -225,6 +278,7 @@
             document.getElementById('welcomeDiv').style.display = "none";
         }
     </script>
+
 </body>
 
 </html>

@@ -3,79 +3,81 @@
 
 <head>
     <link rel="stylesheet" href="scss.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <style>
+        /* This is the styling for the text boxes on the order page*/
+        
         input[type=text] {
             width: 300px;
             height: 20px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
             z-index: -2;
             outline: none;
         }
+        /* This is the styling for the text boxes on the order page*/
         
         input[type=email] {
             width: 300px;
             height: 20px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
             z-index: -2;
             outline: none;
         }
+        /* This is the styling for the text boxes on the order page*/
         
         #size {
             width: 300px;
             height: 25px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
             z-index: -2;
-            margin-left: 360px;
+            margin-left: 4vw;
             outline: none;
             cursor: pointer;
         }
+        /* This is the styling for the text boxes on the order page*/
         
         #payment {
             width: 300px;
             height: 25px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
             z-index: -2;
-            margin-left: 60px;
+            margin-left: 4.5vw;
             outline: none;
             cursor: pointer;
         }
+        /* This is the styling for the text boxes on the order page*/
         
         #cardnmb {
             width: 300px;
             height: 20px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
             z-index: -2;
-            margin-left: 3px;
+            margin-left: 4.5vw;
             outline: none;
         }
+        /* This is the styling for the text boxes on the order page*/
         
         #city {
             width: 300px;
             height: 25px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
             z-index: -2;
-            margin-left: 360px;
+            margin-left: 4vw;
             outline: none;
             cursor: pointer;
         }
@@ -89,85 +91,35 @@
         #pza-tpn {
             cursor: pointer;
         }
-        
-        #pizza-toppings {
-            width: 300px;
-            height: 25px;
-            border: 1px solid black;
-            border-radius: 10px;
-            color: black;
-            background-color: lightgray;
-            margin-left: 360px;
-            margin-top: 0px;
-            cursor: pointer;
-            position: relative;
-            outline: none;
-        }
-        
-        #pizza-premade {
-            width: 300px;
-            height: 25px;
-            border: 1px solid black;
-            border-radius: 10px;
-            color: black;
-            background-color: lightgray;
-            margin-left: 60px;
-            margin-top: 0px;
-            cursor: pointer;
-            position: relative;
-            outline: none;
-        }
+        /*this is the button that says proceed*/
         
         #order-button {
             width: 300px;
             height: 20px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
-            margin-left: 530px;
-            margin-top: 100px;
+            margin-left: 0;
+            margin-top: 60px;
             cursor: pointer;
             position: relative;
             outline: none;
+            transition: width 1s;
         }
+        /*When you hover over the order button it will expand its width to 350px*/
+        
+        #order-button:hover {
+            width: 350px;
+        }
+        /*This button displays the different types of wings*/
         
         #wings {
             width: 180px;
             height: 25px;
             border: 1px solid black;
-            border-radius: 10px;
             color: black;
             background-color: lightgray;
-            margin-left: 360px;
-            margin-top: 0px;
-            cursor: pointer;
-            position: relative;
-            outline: none;
-        }
-        
-        #salad {
-            width: 180px;
-            height: 25px;
-            border: 1px solid black;
-            border-radius: 10px;
-            color: black;
-            background-color: lightgray;
-            margin-left: 60px;
-            margin-top: 0px;
-            cursor: pointer;
-            position: relative;
-            outline: none;
-        }
-        
-        #salad-wings {
-            width: 180px;
-            height: 25px;
-            border: 1px solid black;
-            border-radius: 10px;
-            color: black;
-            background-color: lightgray;
-            margin-left: 60px;
+            margin-left: 0;
             margin-top: 0px;
             cursor: pointer;
             position: relative;
@@ -181,26 +133,21 @@
         <a href="pick-order.html">Order Online</a>
         <a href="#">Terms</a>
         <a href="#">Privacy Policy</a>
-        <a href="#">Franchising</a>
-        <a href="#">Fundraising</a>
-        <a href="#">Careers</a>
     </div>
-    <div style="height:700px; margin-top:100px; z-index: -2;">
+    <div style="height:700px; text-align: center; margin-top:100px; z-index: -2;">
         <h1 style="text-align: center; text-decoration: underline;">Order Online</h1>
         <form id="order" method="get">
-            <label style="margin-left:300px;" for="email">Email:</label>
-            <input type="email" name="email" placeholder="Enter your email address" size="40" maxlength="90" id="email" />
-            <label for="name">Name:</label>
-            <input type="text" name="name" placeholder="Enter you full name" id="name" size="40" max length="90" />
+            <input style="margin-left: 4vw;" type="email" name="email" placeholder="Enter your email address" size="40" maxlength="90" id="email" />
+            <input style="margin-left: 4.5vw;" type="text" name="name" placeholder="Enter you full name" id="name" size="40" max length="90" />
             <br>
         </form>
         <br>
         <form>
             <select name="size" id="size">
-                    <option value="small">Small</option>
-                    <option valiue="medium">Medium</option>
-                    <option value="large">Large</option>
-                    <option value="extra large">Extra Large</option>
+                    <option value="caesar salad">Caesar Salad</option>
+                    <option valiue="chicken caesar salad">Chicken Caesar Salad</option>
+                    <option value="taco salad">Taco Salad</option>
+                    <option value="house salad">House Salad</option>
                 </select>
             <select name="payment" id="payment">
                     <option value="visa">Paypal</option>
@@ -217,19 +164,31 @@
                     <option value="winkler & morden">Winkler & Morden</option>
                     <option value="portage la prairie stonewall">Portage la Prairie Stonewall</option>
                 </select>
-            <input style="margin-left:60px;" type="text" name="address" placeholder="Enter your address" id="address" />
+            <input style="margin-left:4.5vw;" type="text" name="address" placeholder="Enter your address" id="address" />
         </form>
         <br>
         <form id="pstlcd" method="get">
-            <label style="margin-left:252px;" for="postal">Postal Code:</label>
-            <input type="text" name="postal" placeholder="Enter your postal code" maxlength="6" id="postal" />
-            <label for="cardnmb">&nbsp;Card:</label>
+
+            <input style="margin-left:4vw;" type="text" name="postal" placeholder="Enter your postal code" maxlength="6" id="postal" />
+
             <input type="number" name="cardnmb" placeholder="Enter your card number" id="cardnmb" />
         </form>
         <h1 style=" text-decoration: underline; font-weight: bold; text-align: center;">Wings & Salad</h1>
-        <input id="wings" style="margin-top:20px;" type="button" name="answer" value="Wings" onclick="showDiv()" />
-        <input id="salad" style="margin-top:20px;" type="button" name="answer" value="Salad" onclick="showDiv2()" />
-        <input id="salad-wings" style="margin-top:20px;" type="button" name="answer" value="Both" onclick="showDiv3()" />
-
+        <input id="wings" style="margin-top:0px;" type="button" name="answer" value="Wings" onclick="showDiv()" />
+        <div id="welcomeDiv" style="display:none;" class="answer_list">
+            <form style="text-align: center;">
+                <input id="wing-type" type="checkbox" name="wing" value="honey garlic"><b>Honey Garlic</b>
+                <input id="wing-type" type="checkbox" name="wing" value="crispy & spicy"><b>Crispy & Spicy</b>
+                <input id="wing-type" type="checkbox" name="wing" value="teriyaki"><b>Teriyaki</b>
+                <input id="wing-type" type="checkbox" name="wing" value="honey lemon"><b>Honey Lemon</b>
+            </form>
+        </div>
+        <br>
+        <button id="order-button">Proceed</button>
     </div>
-</body>
+    <script>
+        function showDiv() {
+            document.getElementById('welcomeDiv').style.display = "block";
+        }
+    </script>
+    </body

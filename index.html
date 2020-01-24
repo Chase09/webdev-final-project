@@ -14,7 +14,6 @@
             position: relative;
             top: 51px;
         }
-        /*0.2617777777*/
         
         body {
             font-family: Verdana, sans-serif;
@@ -28,7 +27,6 @@
         img {
             vertical-align: middle;
         }
-        /* Slideshow container */
         
         .slideshow-container {
             max-width: 1400px;
@@ -61,12 +59,14 @@
                 opacity: 1
             }
         }
+        /*this is the row for the flex box at the bottom of the screen*/
         
         .row {
             display: flex;
             flex-wrap: wrap;
             padding: 0 4px;
         }
+        /*This is the column for the flex box at the bottom of the screen*/
         
         .column {
             flex: 50%;
@@ -76,6 +76,7 @@
             align-items: center;
             align-content: center;
         }
+        /*This is the styling for the images in the flex box*/
         
         .column img {
             margin-top: 8px;
@@ -85,20 +86,18 @@
             margin-left: 20px;
             margin-top: 20px;
         }
-        /* On smaller screens, decrease text size */
     </style>
+    <!--This is the navbar for everypage-->
     <div class="navbar">
         <img id="pizzahotline-logo" src="pizzahotline.png" />
         <a href="index.html">Home</a>
         <a href="pick-order.html">Order Online</a>
         <a href="#">Terms</a>
         <a href="#">Privacy Policy</a>
-        <a href="#">Franchising</a>
-        <a href="#">Fundraising</a>
-        <a href="#">Careers</a>
     </div>
 
     <div class="slideshow-container">
+        <!--This is the container for the slideshow-->
 
         <div class="mySlides fade">
             <img src="https://mobile-cuisine.com/wp-content/uploads/2012/11/pizza-fun-facts.jpg" style="width:1351px; height:489px;">
@@ -117,6 +116,7 @@
         Welcome to pizza hotlines official website, if you are here to order online then click the order online section of the navigation bar.<br> If you are here to place an order and then pick it up then call us at (204)-222-2222.
     </p>
     <div class="row">
+        <!--This is the html code for the flex box at the bottom of the page-->
         <div class="column">
             <img src="https://cdn.popmenu.com/image/upload/c_limit,f_auto,h_1440,q_auto,w_1440/twave3pm189b1ezmkrkq.jpg">
             <img src="http://wecookpizzaandpasta.com/wp-content/uploads/2016/07/pizza.jpg">
@@ -129,7 +129,7 @@
     <script>
         var slideIndex = 0;
         showSlides();
-
+        //this is the function that allows for the images in the slideshow switch from one to another
         function showSlides() {
             var i;
             var slides = document.getElementsByClassName(" mySlides ");
@@ -141,7 +141,7 @@
                 slideIndex = 1
             }
             slides[slideIndex - 1].style.display = "block ";
-            setTimeout(showSlides, 7000); // Change image every 2 seconds
+            setTimeout(showSlides, 7000); // Change image every 7 seconds
         }
     </script>
 </body>
